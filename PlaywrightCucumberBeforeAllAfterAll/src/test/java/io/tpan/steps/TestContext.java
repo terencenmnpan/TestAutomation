@@ -31,4 +31,14 @@ public class TestContext {
     public Browser getBrowser() {
         return browser;
     }
+
+    String alertText;
+
+    public String getAlertText() {
+        return alertText;
+    }
+
+    public void setAlertText(String alertText) {
+        this.alertText = alertText;
+    }
 }

@@ -2,6 +2,7 @@ package io.tpan.pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import io.tpan.steps.TestContext;
 
 public class DemoPage {
 
@@ -40,18 +41,32 @@ public class DemoPage {
     }
 
     public void fillRegistrationInfo(String firstName, String lastName, String businessName, String email){
-        int num1 = Integer.parseInt(numberOne.textContent());
-        int num2 = Integer.parseInt(numberTwo.textContent());
         this.firstName.fill(firstName);
         this.lastName.fill(lastName);
         this.businessName.fill(businessName);
         this.email.fill(email);
-        result.fill(String.valueOf(num1 + num2));
-        submit.click();
     }
 
-    public void waitForRequestDone(){
-        System.out.println(1);
-        //Locator page.locator().waitFor();
+    public void fillResult(){
+        int num1 = Integer.parseInt(numberOne.textContent());
+        int num2 = Integer.parseInt(numberTwo.textContent());
+        result.fill(String.valueOf(num1 + num2));
+    }
+
+    public void fillWrongResult(){
+        int num1 = Integer.parseInt(numberOne.textContent());
+        int num2 = Integer.parseInt(numberTwo.textContent());
+        result.fill(String.valueOf(num1 + num2 + 1));
+    }
+
+
+    public String clickSubmit(){
+        final String[] message = new String[1];
+        page.onDialog(dialog -> {
+            message[0] = dialog.message();
+            dialog.accept();
+        });
+        submit.click();
+        return message[0];
     }
 }
