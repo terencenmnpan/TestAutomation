@@ -8,6 +8,6 @@ import static io.cucumber.junit.platform.engine.Constants.GLUE_PROPERTY_NAME;
 @SuiteDisplayName("Test Use Cases")
 @IncludeEngines("cucumber")
 @SelectClasspathResource("Features")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "steps")
+//@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "steps")
 public class DemoRequestTests {
 }

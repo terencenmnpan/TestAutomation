@@ -84,7 +84,7 @@
                 <configuration>
                     <properties>
                         <configurationParameters>
-                            cucumber.plugin=pretty,html:target/site/TestRun_${maven.build.timestamp}.html,json:target/site/TestRun_${maven.build.timestamp}.json
+                            cucumber.plugin=pretty,html:target/site/TestRun.html,json:target/site/TestRun.json
                             cucumber.publish.quiet=true
                             cucumber.publish.enabled=false
                         </configurationParameters>
