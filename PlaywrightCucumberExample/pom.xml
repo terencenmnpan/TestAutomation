@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.tpan</groupId>
-    <artifactId>PlaywrightCucumber</artifactId>
+    <artifactId>PlaywrightCucumberExample</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -81,6 +81,15 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
+                <configuration>
+                    <properties>
+                        <configurationParameters>
+                            cucumber.plugin=pretty,html:target/site/TestRun_${maven.build.timestamp}.html,json:target/site/TestRun_${maven.build.timestamp}.json
+                            cucumber.publish.quiet=true
+                            cucumber.publish.enabled=false
+                        </configurationParameters>
+                    </properties>
+                </configuration>
             </plugin>
         </plugins>
     </build>
