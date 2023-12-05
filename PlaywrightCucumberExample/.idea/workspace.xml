@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab88e364-c99d-4758-8655-973c0490944c" name="Changes" comment="Added Validation scenario">
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/tpan/pages/DemoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/tpan/pages/DemoPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/tpan/steps/DemoSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/tpan/steps/DemoSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/tpan/steps/TestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/tpan/steps/TestContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/Register.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/Register.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +34,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2FUvAflJ8IsXmxkZa9UUDVOMyNA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -49,6 +54,9 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -65,7 +73,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: Register">
+  <component name="RunManager" selected="Cucumber Java.Scenario: User is able to request a Demo but does not fill out result">
     <configuration name="Feature: Register" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/Register.feature" />
@@ -127,8 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: Register" />
         <item itemvalue="Cucumber Java.Scenario: User is able to request a Demo but does not fill out result" />
+        <item itemvalue="Cucumber Java.Feature: Register" />
         <item itemvalue="Cucumber Java.Scenario: User is able to request a Demo" />
       </list>
     </recent_temporary>
@@ -143,6 +151,9 @@
       <updated>1664559338328</updated>
       <workItem from="1664559338329" duration="9148000" />
       <workItem from="1664600069917" duration="1374000" />
+      <workItem from="1664665607557" duration="502000" />
+      <workItem from="1664752811923" duration="341000" />
+      <workItem from="1664817585714" duration="15000" />
     </task>
     <servers />
   </component>

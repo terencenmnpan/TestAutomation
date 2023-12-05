@@ -24,7 +24,7 @@ Feature: Register for Demo Request
     When User fills in Demo Request Form <firstName>, <lastName>, <businessName>, <email>
     When User calculates and fills wrong result
     When User clicks submit
-    Then Verify alert "Result number is wrong please type the correct one."
+    Then Verify alert "Result number is invalid"
     Examples:
       | firstName | lastName | businessName | email               |
       | "ABC"     | "DEF"    | "Main Inc."  | "whatever@main.com" |

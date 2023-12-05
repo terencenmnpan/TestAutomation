@@ -29,7 +29,7 @@ public class DemoPage {
         this.firstName = page.locator("[name='first_name']");
         this.lastName = page.locator("[name='last_name']");
         this.businessName = page.locator("[name='business_name']");
-        this.email = page.locator("[name='email']");
+        this.email = page.locator("[name='email'][placeholder='Email']");
         this.submit = page.locator("id=demo");
         this.result = page.locator("id=number");
         this.numberOne = page.locator("id=numb1");
