@@ -5,13 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.tpan</groupId>
-    <artifactId>PlaywrightCucumberBeforeAllAfterAll</artifactId>
+    <artifactId>PlaywrightCucumberExample</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <!--runSuites>**/suites/</runSuites-->
         <cucumber.version>7.3.4</cucumber.version>
         <maven.surefire.version>3.0.0-M7</maven.surefire.version>
         <playwright.version>1.25.0</playwright.version>
@@ -82,11 +81,15 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
-                <!--<configuration>
-                    <includes>
-                        <include>${runSuites}</include>
-                    </includes>
-                </configuration>-->
+                <configuration>
+                    <properties>
+                        <configurationParameters>
+                            cucumber.plugin=pretty,html:target/site/TestRun.html,json:target/site/TestRun.json
+                            cucumber.publish.quiet=true
+                            cucumber.publish.enabled=false
+                        </configurationParameters>
+                    </properties>
+                </configuration>
             </plugin>
         </plugins>
     </build>
