@@ -6,11 +6,14 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.tpan.pages.DemoPage;
 import org.junit.jupiter.api.Assertions;
+
+import java.nio.file.Paths;
 
 public class DemoSteps {
     private final TestContext testContext;
@@ -32,7 +35,12 @@ public class DemoSteps {
     }
 
     @After
-    public void closeContext(){
+    public void afterEach(Scenario scenario){
+        if(scenario.isFailed()){
+            final byte[] screenshot = page.screenshot(new Page.ScreenshotOptions()
+                    .setPath(Paths.get("screenshot.png")));
+            scenario.attach(screenshot, "image/png", scenario.getName());
+        }
         browserContext.close();
     }
 
